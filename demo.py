@@ -46,6 +46,28 @@ rate3 = lif3.firing_rate()
 print(f"int4 to Bitwise: Time steps = {spike3.shape[0]}, firing rate = {rate3}")
 lif3.visualize_spike(filename="Bitwise_Lif_T4_N20.png", title="Bitwise_Lif(TimeStep=4 Tokens=20)")
 
+qmin, qmax = -8, 7
+x_scale = (xmax - xmin) / (qmax - qmin)
+x_zp = qmin - x.min() / x_scale
+x_q2 = torch.round(x / x_scale + x_zp).clamp(qmin, qmax)
+
+lif4 = SpikeCountBitwiseNode(is_bidirectional=True)
+spike4 = lif4(x_q2.to(torch.float32)) 
+rate4 = lif4.firing_rate()
+print(f"int4 to Bitwise: Time steps = {spike4.shape[0]}, firing rate = {rate4}")
+lif4.visualize_spike(filename="Bitwise_Lif_T4_N20_bidirectional.png", title="Bitwise_Lif(TimeStep=4 Tokens=20 Bidirectional)")
+
+qmin, qmax = -8, 7
+x_scale = (xmax - xmin) / (qmax - qmin)
+x_zp = qmin - x.min() / x_scale
+x_q2 = torch.round(x / x_scale + x_zp).clamp(qmin, qmax)
+
+lif5 = SpikeCountBitwiseNode(is_bidirectional=True, is_two_complement=True)
+spike5 = lif5(x_q2.to(torch.float32)) 
+rate5 = lif5.firing_rate()
+print(f"int4 to Bitwise: Time steps = {spike5.shape[0]}, firing rate = {rate5}")
+lif5.visualize_spike(filename="Bitwise_Lif_T4_N20_complement.png", title="Bitwise_Lif(TimeStep=4 Tokens=20 Complement)")
+
 # # === Demo: Convert int6 tensor into 0/1 binary spike trains ===
 # qmin, qmax = 0, 63
 # x_scale = (xmax - xmin) / (qmax - qmin)
