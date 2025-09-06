@@ -12,3 +12,5 @@ We provide three spike encoding methods:
 Based on these encoding methods, we have implemented a large-scale model where sparse addition replaces dense matrix multiplication, designed for low-power edge computing scenarios. Compared to ANN quantization, we achieve performance comparable to ANN quantization while reducing energy consumption by a factor of ten, and we provide valuable insights for the design of next-generation brain-like chips.
 
 It is worth noting that our actual time step (= firing rate  ×  time step) is very short, optimized to T=2, and can also be configured for parallel hardware architectures.
+
+![Int2Spike](https://github.com/BICLab/Int2Spike/blob/main/spike_coding.pdf?raw=true)
