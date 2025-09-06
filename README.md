@@ -13,4 +13,4 @@ Based on these encoding methods, we have implemented a large-scale model where s
 
 It is worth noting that our actual time step (= firing rate  ×  time step) is very short, optimized to T=2, and can also be configured for parallel hardware architectures.
 
-![Int2Spike](https://github.com/BICLab/Int2Spike/blob/main/spike_coding.png?raw=true)
+![Int2Spike](https://github.com/BICLab/Int2Spike/blob/main/spike_coding.png?raw=true) 
