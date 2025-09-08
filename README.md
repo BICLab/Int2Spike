@@ -2,7 +2,7 @@
 
 ## About Int2Spike
 
-Inspired by biological computing mechanisms, MetaLA proposes a spike encoding strategy based on low-power features and sparse event-driven mechanisms. The strategy is realized through a two-step decoupling process: floating-point to integer to spike. In the first step, continuous membrane potential is quantized into integer spike counts, combined with a directed sparsity method; in the second step, spike counts are encoded into sparse spike sequences through temporal expansion.
+Inspired by biological computing mechanisms, we proposes a spike encoding strategy based on low-power features and sparse event-driven mechanisms. The strategy is realized through a two-step decoupling process: floating-point to integer to spike. In the first step, continuous membrane potential is quantized into integer spike counts, combined with a directed sparsity method; in the second step, spike counts are encoded into sparse spike sequences through temporal expansion.
 
 We provide three spike encoding methods:
 - Binary Spike Encoding (0/1) 
